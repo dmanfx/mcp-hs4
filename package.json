@@ -19,7 +19,7 @@
     "model-context-protocol"
   ],
   "author": "MCP_HS4 Contributors",
-  "license": "ISC",
+  "license": "MIT",
   "engines": {
     "node": ">=20"
   },
