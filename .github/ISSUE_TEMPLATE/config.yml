@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security reports
+    url: https://docs.github.com/en/code-security/security-advisories
+    about: Use GitHub Security Advisories (repo Security tab) for sensitive vulnerability reports.

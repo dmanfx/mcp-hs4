@@ -1,0 +1,58 @@
+Admin Enhancements Backlog (Post-v1.0.0)
+
+Current State (Already Implemented)
+
+1. User administration
+- list, create, update, delete, and set role (`hs4.admin.users.*`)
+
+2. Plugin lifecycle
+- catalog read, install, update, remove, enable/disable, restart (`hs4.admin.plugins.*`)
+
+3. Interface management
+- list, add, update, remove, restart, diagnostics (`hs4.admin.interfaces.*`)
+
+4. System administration
+- backup start, restore start, service restart, shutdown, config get/set (`hs4.admin.system.*`)
+
+5. Camera administration
+- config list/create/update/delete, stream profile set, recording set (`hs4.admin.cameras.*`)
+
+6. Event administration
+- create, update, delete (`hs4.admin.events.*`)
+
+7. Config and metadata administration
+- device metadata set, categories list/upsert/delete (`hs4.admin.config.*`)
+
+8. Admin safety and routing controls
+- explicit admin guard envelope (`operationTier`, `domain`, `maintenanceWindowId`, `changeTicket`, `riskLevel`)
+- domain-level enable flags and global admin gate
+- execution routing modes (`adapter`, `direct`, `auto`) with fallback and capability cache
+- audit/state resources (`hs4://admin/policy/state`, `hs4://admin/audit/diff`)
+
+Remaining Enhancements (Not Yet Implemented or Not Fully Generalized)
+
+1. User/session/auth policy depth
+- session lifecycle controls and richer auth-policy operations when exposed by HS4
+
+2. Interface lifecycle depth
+- interface backup/restore workflows and firmware-specific operations where HS4/API surface permits
+
+3. System configuration breadth
+- broader time/network/system policy operations if reliable HS4 endpoints are available
+
+4. Event graph tooling depth
+- higher-level trigger/action/condition graph authoring helpers beyond raw definition payload edits
+
+5. Admin resilience validation depth
+- expanded long-running interruption/chaos testing
+- formalized backup/restore disaster rehearsal automation
+
+Roadmap Rules
+
+- No admin endpoint should be considered production-ready without:
+- typed input/output contract
+- policy enforcement tests
+- audit coverage tests
+- rollback path notes
+
+- Admin tools remain disabled by default and must be explicitly enabled in configuration.
